@@ -8,10 +8,11 @@ const routes_1 = __importDefault(require("./routes/routes"));
 const app = (0, express_1.default)();
 const cors = require("cors");
 app.use(express_1.default.json());
-//transformar los datos de un formulario html a objetos json 
 app.use(express_1.default.urlencoded({ extended: false }));
+app.use(cors({
+    methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH']
+}));
 app.use(routes_1.default);
-app.use(cors());
 app.listen(3000, () => {
     console.log("Servidor corriendo en puerto 3000");
 });

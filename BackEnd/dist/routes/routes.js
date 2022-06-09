@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const controller_1 = require("../controller/controller");
+const cors = require("cors");
 const router = (0, express_1.Router)();
 router.get('/test', (req, res) => res.send("Hello world"));
 router.get('/instruments', controller_1.controller.getInstrument);

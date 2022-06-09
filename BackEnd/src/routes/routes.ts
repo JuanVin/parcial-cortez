@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { controller } from "../controller/controller";
-
+const cors = require("cors")
 const router = Router();
 
 router.get('/test', (req, res) => res.send("Hello world"))
